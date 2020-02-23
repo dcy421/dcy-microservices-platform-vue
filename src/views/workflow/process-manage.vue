@@ -10,7 +10,7 @@
     <!-- 表格 -->
     <dcy-table
       ref="dcyTable"
-      url="workflow-center/process/list"
+      url="workflow-center/process/page"
       :columns="columns"
       :check-box="false">
       <template slot-scope="{ row }" slot="isSuspended">
