@@ -175,6 +175,28 @@ export const asyncRoutes = [
       }
     ]
   },
+  {
+    path: '/workflow',
+    component: Layout,
+    meta: {
+      title: '工作流管理',
+      icon: 'nested'
+    },
+    children: [
+      {
+        path: 'model-manage',
+        component: () => import('@/views/workflow/model-manage'),
+        name: 'model-manage',
+        meta: { title: '模型管理', icon: 'user', noCache: true }
+      },
+      {
+        path: 'process-manage',
+        component: () => import('@/views/workflow/process-manage'),
+        name: 'process-manage',
+        meta: { title: '流程管理', icon: 'user', noCache: true }
+      }
+    ]
+  },
   // nestedRouter,
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
