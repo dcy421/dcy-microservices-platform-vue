@@ -41,6 +41,8 @@
       :title="dialogTitle"
       :visible.sync="dialogShow"
       :close-on-click-modal="false"
+      append-to-body
+      :modal-append-to-body="false"
       @close="handleReset('form')">
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
         <el-form-item label="权限名称" prop="powName">
@@ -77,6 +79,8 @@
       title="授权模块"
       :visible.sync="dialogModuleShow"
       :close-on-click-modal="false"
+      append-to-body
+      :modal-append-to-body="false"
       @close="dialogModuleShow = false">
       <el-tree
         :data="moduleData"
@@ -102,6 +106,8 @@
       title="授权菜单"
       :visible.sync="dialogMenuShow"
       :close-on-click-modal="false"
+      append-to-body
+      :modal-append-to-body="false"
       @close="dialogMenuShow = false">
       <el-tree
         ref="dcyMenuTree"

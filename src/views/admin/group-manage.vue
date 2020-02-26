@@ -31,6 +31,8 @@
     <el-dialog
       :title="dialogTitle"
       :visible.sync="dialogShow"
+      append-to-body
+      :modal-append-to-body="false"
       :close-on-click-modal="false"
       @close="handleReset('form')">
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
@@ -53,6 +55,8 @@
     <el-dialog
       title="授权角色"
       :visible.sync="dialogAuthRoleShow"
+      append-to-body
+      :modal-append-to-body="false"
       :close-on-click-modal="false">
       <el-transfer
         v-if="dialogAuthRoleShow"

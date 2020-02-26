@@ -162,16 +162,6 @@ export const asyncRoutes = [
             meta: { 'title': 'swagger文档', 'icon': 'link' }
           }
         ]
-      },
-      {
-        path: 'druid',
-        component: Layout,
-        children: [
-          {
-            path: 'http://localhost:9001/admin-center/druid/login.html',
-            meta: { 'title': 'druid监控', 'icon': 'link' }
-          }
-        ]
       }
     ]
   },

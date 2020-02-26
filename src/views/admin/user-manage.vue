@@ -38,8 +38,13 @@
       </template>
     </dcy-table>
 
-    <el-dialog :title="dialogTitle" :visible.sync="dialogShow" :close-on-click-modal="false"
-               @close="handleReset('form')">
+    <el-dialog
+      :title="dialogTitle"
+      :visible.sync="dialogShow"
+      append-to-body
+      :modal-append-to-body="false"
+      :close-on-click-modal="false"
+      @close="handleReset('form')">
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
         <el-form-item label="头像" prop="headPort">
           <dcy-avatar-upload
@@ -104,6 +109,8 @@
     <el-dialog
       title="授权角色"
       :visible.sync="dialogAuthRoleShow"
+      append-to-body
+      :modal-append-to-body="false"
       :close-on-click-modal="false">
       <el-transfer
         v-if="dialogAuthRoleShow"
@@ -122,6 +129,8 @@
     <el-dialog
       title="授权用户组"
       :visible.sync="dialogAuthGroupShow"
+      append-to-body
+      :modal-append-to-body="false"
       :close-on-click-modal="false">
       <el-transfer
         v-if="dialogAuthGroupShow"

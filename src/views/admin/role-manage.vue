@@ -38,6 +38,8 @@
     <el-dialog
       :label="dialogTitle"
       :visible.sync="dialogShow"
+      append-to-body
+      :modal-append-to-body="false"
       :close-on-click-modal="false"
       @close="handleReset('form')">
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
@@ -70,6 +72,8 @@
       title="授权"
       width="600"
       :visible.sync="dialogAuthPowerShow"
+      append-to-body
+      :modal-append-to-body="false"
       :close-on-click-modal="false">
       <el-transfer
         v-if="dialogAuthPowerShow"

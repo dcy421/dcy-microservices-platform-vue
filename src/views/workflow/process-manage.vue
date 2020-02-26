@@ -27,7 +27,8 @@
     <el-dialog
       title="流程图"
       :visible.sync="dialogProcessPicShow"
-      append-to-body>
+      append-to-body
+      :modal-append-to-body="false">
       <img width="100%" :src="processPicUrl" alt="">
     </el-dialog>
   </div>

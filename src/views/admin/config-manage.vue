@@ -30,6 +30,8 @@
     <el-dialog
       :title="dialogTitle"
       :visible.sync="dialogShow"
+      append-to-body
+      :modal-append-to-body="false"
       :close-on-click-modal="false"
       @close="handleReset('form')">
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">

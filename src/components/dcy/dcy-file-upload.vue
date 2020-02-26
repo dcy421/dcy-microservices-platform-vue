@@ -23,7 +23,11 @@
       <slot slot="tip"></slot>
     </el-upload>
 
-    <el-dialog :visible.sync="dialogVisible" append-to-body title="查看图片">
+    <el-dialog
+      title="查看图片"
+      :visible.sync="dialogVisible"
+      append-to-body
+      :modal-append-to-body="false">
       <img width="100%" :src="imageUrl" alt="">
     </el-dialog>
   </div>
